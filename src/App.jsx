@@ -10,6 +10,10 @@ function App() {
         setShowProductList(true);
     };
 
+    const handleGetStartedClick2 = () => {
+        setShowProductList(false);
+    };
+
     return (
         <div className="app-container">
             <div className={`landing-page ${showProductList ? 'fade-out' : ''}`}>
@@ -31,7 +35,7 @@ function App() {
 
             </div>
             <div className={`product-list-container ${showProductList ? 'visible' : ''}`}>
-                <ProductList />
+                <ProductList onPresSed={handleGetStartedClick2}/>
             </div>
         </div>
     );
